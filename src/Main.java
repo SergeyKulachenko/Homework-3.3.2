@@ -2,21 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        float Remains = 100.25f; //остаток на счёте
-         //Payment =0.00f;
+        float remains = 100.25f; //остаток на счёте
         Scanner in = new Scanner(System.in);
-        System.out.println("Ваш остаток на счёте "+Remains + " рублей, Внесите платёж");
-        float Payment = in.nextFloat();
+        System.out.println("Ваш остаток на счёте " + remains + " рублей, Внесите платёж");
+        float payment = in.nextFloat();
         //float Payment = 125f; //платёж
-        int Bonus = 0; //Бонус
-        float Balanse = 0; //итого на счету
-        if (Payment >= 1000) {
-            Bonus = (int) Payment / 100;
-            Balanse = Remains + Payment + Bonus;
+        int bonus = 0; //Бонус
+        float balanse = 0; //итого на счету
+        if (payment >= 1000) {
+            bonus = (int) payment / 100;
+            balanse = remains + payment + bonus;
         } else {
-            Balanse = Remains + Payment;
+            balanse = remains + payment;
         }
-        System.out.println("Ваш бонус " + Bonus + " рублей");
-        System.out.println("Итого на вашем счету " + Balanse + " рублей");
+        System.out.println("Ваш бонус " + bonus + " рублей");
+        System.out.println("Итого на вашем счету " + balanse + " рублей");
     }
 }
